@@ -1,0 +1,17 @@
+:root{ scroll-padding-top: env(safe-area-inset-top,0px); }
+html{scroll-behavior:smooth;}
+body{ background:#0D0D11; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);}
+.glass{ background:rgba(13,13,17,0.55); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px); }
+.glow{ background:radial-gradient(ellipse 60% 50% at 50% 20%, rgba(212,175,55,0.18), transparent 70%); }
+.card-scene{ perspective:1400px; }
+.card-flip{ transition:transform .9s cubic-bezier(.22,.9,.32,1); transform-style:preserve-3d; }
+.card-flip.flipped{ transform:rotateY(180deg); }
+.card-face{ backface-visibility:hidden; -webkit-backface-visibility:hidden; }
+.card-back{ transform:rotateY(180deg); }
+.gold-line{ background:linear-gradient(90deg,transparent,#D4AF37,transparent); }
+.hairline{ border-color:rgba(212,175,55,0.18); }
+::selection{ background:#D4AF37; color:#0D0D11; }
+.fade-up{ animation:fadeUp .9s ease both; }
+@keyframes fadeUp{ from{opacity:0; transform:translateY(14px);} to{opacity:1; transform:translateY(0);} }
+@media (prefers-reduced-motion:reduce){ *{animation:none!important; transition:none!important;} }
+.modal-bg{ background:rgba(5,5,8,0.82); backdrop-filter:blur(6px); }
